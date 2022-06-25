@@ -11,7 +11,6 @@ import {
 import "@vime/core/themes/default.css";
 
 
-
 interface VideoProps {
   lessonSlug: string;
 }
@@ -52,7 +51,7 @@ export const Video = (props: VideoProps) => {
             {data.lesson.teacher && (
             <div className="flex items-center gap-4 mt-6">
               <img
-                src={data.lesson.teacher.avatarUrl}
+                src={data.lesson.teacher.avatarURL}
                 alt={data.lesson.teacher.name}
                 className="h-16 w-16 rounded-full border-2 border-blue-500"
               />
