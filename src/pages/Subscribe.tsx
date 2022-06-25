@@ -2,6 +2,7 @@ import { useCreateSubscriberMutation } from "../graphql/generated";
 import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
+import codeMockup from "../../src/assets/code-mockup.png";
 
 export const Subscribe = () => {
   const navigate = useNavigate();
@@ -26,9 +27,9 @@ export const Subscribe = () => {
 
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center ">
-      <div className="w-full max-w-[1100px] flex flex-col items-center justify-between mt-10 lg:flex-row lg:mt-20 mx-auto before:block before:max-w-[1100px] before:absolute before:w-full before:h-full before:bg-[url(../src/assets/React-icon.svg)] before:bg-no-repeat before:bg-top before:bg-contain before:lg:bg-center before:lg:bg-auto">
+      <div className="w-full max-w-[1100px] flex flex-col items-center justify-between mt-10 lg:flex-row lg:mt-20 mx-auto before:block before:max-w-[1100px] before:absolute before:w-full before:h-full before:bg-reactIcon before:bg-no-repeat before:bg-top before:bg-contain before:lg:bg-center before:lg:bg-auto before:-z-10">
         <div className="max-w-[640px] ">
-          <div className="w-full flex items-center justify-center">
+          <div className="w-full flex items-center justify-center lg:justify-start lg:items-start">
             <Logo />
           </div>
 
@@ -58,12 +59,12 @@ export const Subscribe = () => {
                 setName(e.target.value);
               }}
               placeholder="Seu nome completo"
-              className="bg-gray-900 rounded px-5 h-14 "
+              className="bg-gray-900 rounded px-5 h-14 outline-none focus:outline-green-700 focus:outline"
             />
             <input
               type="text"
               placeholder="Digite seu e-mail"
-              className="bg-gray-900 rounded px-5 h-14 "
+              className="bg-gray-900 rounded px-5 h-14 focus:outline-green-700 focus:outline"
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
@@ -79,7 +80,7 @@ export const Subscribe = () => {
         </div>
       </div>
 
-      <img src="../src/assets/code-mockup.png" alt="" className="mt-10" />
+      <img src={codeMockup} alt="" className="mt-10" />
     </div>
   );
 };
