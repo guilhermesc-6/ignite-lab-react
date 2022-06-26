@@ -9,7 +9,7 @@
 
 Aplicação construida durante o Ignite Lab na Rocketseat 🚀.
 
-Este app é uma plataforma onde se pode assistir os conteúdos de um evento de forma prática e amigável, com uma página de login, e a página dos vídeos.
+Este app é uma plataforma onde se pode assistir os conteúdos de um evento de forma amigável, com uma página de login, e a página dos vídeos.
 
 ## Stack utilizada
 
